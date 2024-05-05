@@ -20,6 +20,10 @@ function init() {
 	inquirer.prompt(questions)
 	.then((data) => {
 		console.log(data)
+		console.log(data.letters)
+		console.log(data.text_color)
+		console.log(data.shape)
+		console.log(data.shape_color)
 		
 		writeToFile('examples/example.svg',svgMarkUp(data))
 	})
