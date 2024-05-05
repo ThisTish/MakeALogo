@@ -1,3 +1,4 @@
+const validateLength = require("../lib/input");
 const prompts = require("../lib/input");
 const inquirer = require('inquirer')
 
@@ -27,13 +28,15 @@ jest.mock('inquirer', () => {
 	return {prompt: jest.fn()}
 })
 
-describe('prompt', () =>{
+describe('prompt letters', () =>{
 	afterEach(()=>{
 		jest.resetAllMocks()
 	})
 	it('should take in letters after prompt', async ()=>{
-		inquirer.prompt.mockResolvedValueOnce('dks')
-		const actual = await prompts('abc')
-		expect(actual).toBe('abc')
+		expect(await prompts(inquirer.prompt.mockResolvedValueOnce('123'))).toBe('123')
 	})
+	// *doesn't work properly but almost there.
+	// it('should reject answer and alert to enter less than 3 characters if more than 3 entered', async() =>{
+	// 	expect(await validateLength(inquirer.prompt.mockResolvedValueOnce('1234'))).toEqual(true)
+	// })
 })
