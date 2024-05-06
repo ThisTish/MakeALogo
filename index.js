@@ -9,7 +9,7 @@ function writeToFile(fileName, data) {
 			console.log('an error occured', err)
 		}
 		else{
-			console.log('SVG file was written successfully')
+			console.log('Generated logo.svg')
 		}
 	})
 }
@@ -18,7 +18,7 @@ function init() {
 	inquirer.prompt(questions)
 	.then((data) => {
 		console.log(data)
-		writeToFile("examples/b.svg", svgMarkUp(data))
+		writeToFile("dist/logo.svg", svgMarkUp(data))
 	})
 }
 init()
