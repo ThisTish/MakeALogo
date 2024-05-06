@@ -3,7 +3,7 @@ const fs = require('fs')
 const inquirer = require('inquirer')
 // const prompts = require('./lib/input')
 const questions = require('./lib/input')
-const svgMarkUp = require('./lib/writeFile')
+const {svgMarkUp, pickShape} = require('./lib/writeFile')
 
 function writeToFile(fileName, data) {
 	fs.writeFile(fileName, data, (err) =>{
@@ -19,13 +19,13 @@ function writeToFile(fileName, data) {
 function init() {
 	inquirer.prompt(questions)
 	.then((data) => {
-		console.log(data)
-		console.log(data.letters)
-		console.log(data.text_color)
-		console.log(data.shape)
-		console.log(data.shape_color)
+		pickShape(data)
+		// console.log(data.letters)
+		// console.log(data.text_color)
+		// console.log(data.shape)
+		// console.log(data.shape_color)
 		
-		writeToFile('examples/example.svg',svgMarkUp(data))
+		// writeToFile('examples/example.svg',svgMarkUp(data))
 	})
 }
 init()
