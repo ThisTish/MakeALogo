@@ -1,7 +1,5 @@
-// const prompts = require("./lib/input");
 const fs = require('fs')
 const inquirer = require('inquirer')
-// const prompts = require('./lib/input')
 const questions = require('./lib/input')
 const {svgMarkUp, pickShape} = require('./lib/writeFile')
 
@@ -19,6 +17,7 @@ function writeToFile(fileName, data) {
 function init() {
 	inquirer.prompt(questions)
 	.then((data) => {
+		console.log(data)
 		writeToFile("examples/b.svg", svgMarkUp(data))
 	})
 }

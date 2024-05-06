@@ -1,4 +1,4 @@
-const validateLength = require("../lib/input");
+// const validateLength = require("../lib/input");
 const prompts = require("../lib/input");
 const inquirer = require('inquirer')
 

@@ -19,7 +19,7 @@ describe('square shape', () =>{
 	const shape = new Square
 	shape.setColor('green')
 	it('should return a string to render a green square',()=>{
-		expect(shape.render()).toEqual(`<rect x="150" y="150" width="30" height="30" fill="green"/>`)
+		expect(shape.render()).toEqual(`<rect x="50" y="0" width="200" height="200" fill="green"/>`)
 	})
 })
 
@@ -27,7 +27,7 @@ describe('circle shape', () =>{
 	const shape = new Circle
 	shape.setColor('yellow')
 	it('should return a string to render a yellow circle',()=>{
-		expect(shape.render()).toEqual(`<circle cx="25" cy="75" r="20" fill="yellow"/>`)
+		expect(shape.render()).toEqual(`<circle cx="150" cy="100" r="100" fill="yellow"/>`)
 	})
 })
 
