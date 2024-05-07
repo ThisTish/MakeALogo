@@ -2,6 +2,7 @@ const fs = require('fs')
 const inquirer = require('inquirer')
 const questions = require('./lib/input')
 const {svgMarkUp, pickShape} = require('./lib/writeFile')
+const chalk = require('chalk')
 
 function writeToFile(fileName, data) {
 	fs.writeFile(fileName, data, (err) =>{
@@ -9,7 +10,7 @@ function writeToFile(fileName, data) {
 			console.log('an error occured', err)
 		}
 		else{
-			console.log('Generated logo.svg')
+			console.log(chalk.inverse('Generated logo.svg'))
 		}
 	})
 }

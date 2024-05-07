@@ -1,4 +1,6 @@
-// const validateLength = require("../lib/input");
+// ! doesn't really work. I tried for a bit.
+
+
 const prompts = require("../lib/input");
 const inquirer = require('inquirer')
 
