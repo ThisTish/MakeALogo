@@ -1,11 +1,9 @@
-// ! doesn't really work. I tried for a bit.
-
-
+// ! issue. was working, but code wasn't now code works, but testing doesn't. will come back to.
 const prompts = require("../lib/input");
 const inquirer = require('inquirer')
 
 jest.mock('inquirer', () => {
-	return {prompt: jest.fn()}
+	return {prompts: jest.fn()}
 })
 
 describe('letters prompt', () =>{
@@ -54,9 +52,35 @@ describe('shape color prompt', () =>{
 
 
 
+// *going to try this route.
+jest.mock('inquirer', () => {
+    return {
+        prompt: jest.fn() // Mocking the prompt function
+    };
+});
 
+const inquirer = require('inquirer'); // Importing the mocked inquirer module
+const { prompts } = require('./your-module'); // Importing the module under test
 
+describe('letters prompt', () => {
+    afterEach(() => {
+        jest.resetAllMocks();
+    });
 
+    it('should take in letters after prompt', async () => {
+        // Mocking the prompt function to resolve with '123' when called
+        inquirer.prompt.mockResolvedValueOnce({ input: '123' });
+
+        // Testing the prompts function
+        const result = await prompts();
+
+        // Asserting that the result is '123'
+        expect(result).toBe('123');
+
+        // Asserting that inquirer.prompt was called with the correct arguments
+        expect(inquirer.prompt).toHaveBeenCalledWith(/* any arguments you expect */);
+    });
+});
 
 
 // *doesn't work properly but almost there.
