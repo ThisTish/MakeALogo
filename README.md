@@ -13,12 +13,14 @@ Make a quick svg logo with only answering a few questions!
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Examples](#examples)
 - [Contributing](#contributing)
+- [Tests](#tests)
 - [Questions](#questions)
 
 ## 💾 Installation <a id="installation"></a>
 
-Start by cloning the code from the GitHub repository. Then run ```git clone <clone link>``` in your terminal in a chosen directory. This application will need node and npm installed.
+Start by cloning the code from the GitHub repository. Then run ```git clone <clone link>``` in your terminal in a chosen directory. This application will need node and npm installed. You will then have to run ```npm install``` in the root directory to recieve all the necessary packages need to run this application.
 
 ## 🖱️ Usage <a id="usage"></a>
 
@@ -37,11 +39,24 @@ This application was made to be used again and again, but the logo.svg file will
 
 [*Video Demo*]...
 
+## 🖼️ Examples <a id="examples"></a>
+
+![Circle Example](examples/circle.svg)
+![Triangle Example](examples/triangle.svg)
+![Square Example](examples/square.svg)
+
 ## 🌐 Contributing <a id="contributing"></a>
 
 
 Please contact me through my email provided below to work together. 
 
+## 📝 Tests <a id="tests"></a>
+
+Tests were conducted using the [Jest](https://jestjs.io/docs/getting-started) package.
+
+There are tests written for the shape classes, to evaluate that they rendered their specifications properly, and that the color choice was passed properly to it. It is available to run by using the command ```npm test tests/shapes.test.js```. It should pass all 4 tests.
+
+More tests were made for the file writing process of this application. In the terminal, run ```npm test tests/writeFile.test.js```. There, 3 tests should pass. They are there to insure that the shape and color selection will be entered in the SVG markup correctly.
 
 ## ✋ Questions <a id="questions"></a>
 
