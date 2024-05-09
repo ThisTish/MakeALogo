@@ -1,7 +1,3 @@
-
-<!-- !add testing section, title, and table of contents w/link add video and examples-->
-
-
 # **Make A Logo**
 
 
@@ -33,11 +29,11 @@ You can also run the same command ```node index.js``` in your desktop's terminal
 
 The application will run through a series of prompts where you will choose some details for your logo. You will need to use at least 1 character but no more than 3 for the content of the logo. Using a color keyword or hex code for picking the color of your text and of your shape is available. There is a choice of Square, Circle, or Triangle for the base shape of it all.
 
-Once completing all the prompts, a file named logo.svg will be created in the dist directory. It will also log that it has been created in the console.
+Once completing all the prompts, a file named logo.svg will be created in the dist directory. It will also log that it has been created in the console. You can view it by opening the file in the browser. One way to quickly do that is to open the file in file explorer and double click it. To view from VS Code open the file, and then use the keyboard shortcut <strong>ALT + B</strong> for Windows or <strong>Cmd + Shift + V</strong> for Apple users.
 
 This application was made to be used again and again, but the logo.svg file will be written over with the new responses each time. So be sure to save it to another directory, or with another name if you'd like to keep it.
 
-[*Video Demo*]...
+[*Video Demo*](https://drive.google.com/file/d/1rLneUphi67GZ3sSGxjdPNGFyZIFTSiP9/view) Demonstrating each shape, input requirements, input options, different ways to view, and tests to run.
 
 ## 🖼️ Examples <a id="examples"></a>
 
