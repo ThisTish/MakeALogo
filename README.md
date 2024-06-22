@@ -59,6 +59,6 @@ More tests were made for the file writing process of this application. In the te
 
 If you have any questions, feel free to contact me at:
 
-- *GitHub: [tishthegoat](https://github.com/tishthegoat)*
-- *Email: tishthegoat@gmail.com*
+- *GitHub: [ThisTish](https://github.com/thistish)*
+- *Email: tish.sirface@gmail.com*
 
